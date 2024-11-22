@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styles from "./header.module.scss"
 import Radiobutton from '../radiobutton/Radiobutton';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
-import { fetchWeather } from '../../redux/weather/weatherSlice';
 
 interface IHeaderProps { }
 

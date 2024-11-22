@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { fetchWeather, fetchWeatherMoreDays } from '../../redux/weather/weatherSlice'
 import styles from "./content.module.scss"
@@ -34,7 +34,7 @@ const Content = () => {
                 {moreData?.list?.slice(0, 6).map(data =>
                     <div key={Math.random() * 1000000}>
                         {data.dt}
-                        {new Date(data.dt * 1000).toLocaleString('en-US', options)}
+                        {new Date(data.dt * 1000).toLocaleString('en-US', options as any)}
                     </div>)}
             </div>
             
